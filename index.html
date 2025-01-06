@@ -9,19 +9,18 @@
 <body>
   <header>
     <h1>Welcome to Issac's Page</h1>
-    <p>Stay connected with Issac and Hema!</p>
+    <p>Stay connected with Issac!</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="https://instagram.com/im_issac_sodari" target="_blank">Instagram</a></li>
-      <li><a href="https://facebook.com/Hema.koti.5" target="_blank">Hema's Facebook</a></li>
     </ul>
   </nav>
 
   <section class="form-container">
     <h2>Sign Up for Updates</h2>
-    <form action="#" method="POST">
+    <form id="subscribeForm" action="javascript:void(0)">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required placeholder="Enter your full name">
       
@@ -32,8 +31,31 @@
     </form>
   </section>
 
+  <section id="resources" class="hidden">
+    <h2>Azure DevOps Learning Resources</h2>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops" target="_blank">Official Azure DevOps Documentation</a></li>
+      <li><a href="https://www.udemy.com/course/azure-devops-essential-guide/" target="_blank">Azure DevOps Essential Guide (Udemy)</a></li>
+      <li><a href="https://www.youtube.com/playlist?list=PL8GkXr97EDpRIghA9-7scXy2oc59gpdZW" target="_blank">Azure DevOps Tutorials (YouTube Playlist)</a></li>
+      <li><a href="https://www.coursera.org/learn/azure-devops" target="_blank">Azure DevOps Course (Coursera)</a></li>
+      <li><a href="https://www.linkedin.com/learning/topics/azure-devops" target="_blank">Azure DevOps Learning (LinkedIn Learning)</a></li>
+    </ul>
+  </section>
+
   <footer>
     <p>&copy; 2025 Issac's Page. All rights reserved.</p>
   </footer>
+
+  <script>
+    const form = document.getElementById('subscribeForm');
+    const resourcesSection = document.getElementById('resources');
+
+    form.addEventListener('submit', function() {
+      // Show resources section after submission
+      resourcesSection.classList.remove('hidden');
+      // Optionally hide the form after submission
+      form.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
