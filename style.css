@@ -1,0 +1,9 @@
+h2{
+  color:"Red";
+  font-size=15px;
+}
+h2:hover{
+  transistion:"all 0.2s";
+  color: "black";
+    font-size=25px;
+}
