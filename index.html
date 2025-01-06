@@ -19,15 +19,12 @@
   </nav>
 
   <section class="form-container">
-    <h2>Sign Up for Updates</h2>
+    <h2>Enter Your Name</h2>
     <form id="subscribeForm" action="javascript:void(0)">
       <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      <input type="text" id="name" name="name" required placeholder="Enter your name" value="Issac">
       
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required placeholder="Enter your email address">
-      
-      <button type="submit">Subscribe</button>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
@@ -49,12 +46,25 @@
   <script>
     const form = document.getElementById('subscribeForm');
     const resourcesSection = document.getElementById('resources');
+    const nameInput = document.getElementById('name');
 
     form.addEventListener('submit', function() {
-      // Show resources section after submission
-      resourcesSection.classList.remove('hidden');
-      // Optionally hide the form after submission
-      form.style.display = 'none';
+      const name = nameInput.value.trim().toLowerCase();
+      
+      if (name === 'issac') {
+        // Change background to a cat image and blue color for links
+        document.body.style.backgroundImage = "url('https://placekitten.com/800/600')";
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.color = 'blue';
+        
+        // Show resources section after submission
+        resourcesSection.classList.remove('hidden');
+        
+        // Optionally hide the form after submission
+        form.style.display = 'none';
+      } else {
+        alert('Please enter "Issac" as your name.');
+      }
     });
   </script>
 </body>
